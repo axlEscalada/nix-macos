@@ -10,8 +10,16 @@
 ### Packages:
 
 - Nixvim
+- Tmux
 
 ### TODO configs:
 
-- tmux
-- wezterm
+- ZSH
+- Wezterm
+- Docker
+- IntelliJ
+- go, zig, java, kotlin
+
+### References
+
+[nix-on-macos](https://dev.to/synecdokey/nix-on-macos-2oj3)
