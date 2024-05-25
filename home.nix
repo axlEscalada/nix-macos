@@ -1,4 +1,8 @@
-{ pkgs, nixvim, ... }: {
+{
+  pkgs,
+  nixvim,
+  ...
+}: {
   # This is required information for home-manager to do its job
   home = {
     stateVersion = "23.11";
@@ -6,6 +10,8 @@
     homeDirectory = "/Users/axel.escalada";
     packages = [
       nixvim.packages.${pkgs.system}.default
+      pkgs.git
+      pkgs.kotlin-native
     ];
   };
   xdg.enable = true;
