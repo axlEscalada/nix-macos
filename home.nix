@@ -3,6 +3,9 @@
   nixvim,
   ...
 }: {
+  imports = [
+    ./programs
+  ];
   # This is required information for home-manager to do its job
   home = {
     stateVersion = "23.11";
