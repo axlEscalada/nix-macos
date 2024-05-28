@@ -7,7 +7,7 @@
     # unstable has the 'freshest' packages you will find, even the AUR
     # doesn't do as good as this, and it's all precompiled.
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim.url = "github:axlEscalada/nixvim?rev=b6123f1baaffaefe6e85ba09e4f7e4a3b79f74d4";
+    nixvim.url = "github:axlEscalada/nixvim";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
