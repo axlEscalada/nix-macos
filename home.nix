@@ -11,10 +11,14 @@
     stateVersion = "23.11";
     username = "axel.escalada";
     homeDirectory = "/Users/axel.escalada";
-    packages = [
+    packages = with pkgs; [
+      # zigpkgs."0.13.0"
+      libllvm
+      libclang
+      clang
       nixvim.packages.${pkgs.system}.default
-      pkgs.git
-      pkgs.kotlin-native
+      git
+      kotlin-native
     ];
   };
   xdg.enable = true;
