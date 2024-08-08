@@ -1,24 +1,26 @@
 {
   pkgs,
   nixvim,
+  zls-flake,
   ...
 }: {
   imports = [
     ./programs
   ];
-  # This is required information for home-manager to do its job
   home = {
     stateVersion = "23.11";
     username = "axel.escalada";
     homeDirectory = "/Users/axel.escalada";
     packages = with pkgs; [
-      # zigpkgs."0.13.0"
+      bun
+      zls-flake.packages.${pkgs.system}.zls
+      zigpkgs.master
       libllvm
       libclang
       clang
       nixvim.packages.${pkgs.system}.default
       git
-      kotlin-native
+      obsidian
     ];
   };
   xdg.enable = true;

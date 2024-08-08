@@ -9,6 +9,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:axlEscalada/nixvim";
     zig.url = "github:mitchellh/zig-overlay";
+    zls-flake = {
+      url = github:zigtools/zls;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +25,7 @@
     nixpkgs,
     home-manager,
     nixvim,
+    zls-flake,
     ...
   } @ inputs: let
     # Overlays is the list of overlays we want to apply from flake inputs.
@@ -37,7 +42,7 @@
           {nixpkgs.overlays = overlays;}
         ];
         extraSpecialArgs = {
-          inherit nixvim;
+          inherit nixvim zls-flake;
         };
       };
     };
