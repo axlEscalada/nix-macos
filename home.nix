@@ -13,6 +13,7 @@
     homeDirectory = "/Users/axel.escalada";
     packages = with pkgs; [
       bun
+      wget
       zls-flake.packages.${pkgs.system}.zls
       zigpkgs.master
       libllvm
@@ -21,6 +22,7 @@
       nixvim.packages.${pkgs.system}.default
       git
       obsidian
+      zellij
     ];
   };
   xdg.enable = true;
