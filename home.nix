@@ -15,6 +15,7 @@
       bun
       wget
       zls-flake.packages.${pkgs.system}.zls
+      # zls
       zigpkgs.master
       libllvm
       libclang
